@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" class="action-bar">
+  <!-- USER MENU -->
+  <button mat-button class="action-btn" [matMenuTriggerFor]="userMenu" aria-label="Open user menu">
+    <mat-icon class="icon">groups</mat-icon>
+    <span class="text">Users</span>
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>person_add</mat-icon>
+      <span>Create a User</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>person_remove</mat-icon>
+      <span>Delete a User</span>
+    </button>
+  </mat-menu>
+
+  <!-- CONNECTION MENU -->
+  <button mat-button class="action-btn" [matMenuTriggerFor]="connectionMenu" aria-label="Open connections menu">
+    <mat-icon class="icon">connect_without_contact</mat-icon>
+    <span class="text">Connections</span>
+  </button>
+  <mat-menu #connectionMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>social_distance</mat-icon>
+      <span>Create a Connection</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>content_cut</mat-icon>
+      <span>Delete a Connection</span>
+    </button>
+  </mat-menu>
+  
+  <!-- ADMIN MENU -->
+  <span class="flex-spacer"></span>
+  <button mat-button class="action-btn" [matMenuTriggerFor]="adminMenu" aria-label="Open admin menu">
+    <mat-icon class="icon">auto_fix_high</mat-icon>
+    <span class="text">Admin</span>
+  </button>
+  <mat-menu #adminMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>smart_toy</mat-icon>
+      <span>Generate Fake User</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>dynamic_form</mat-icon>
+      <span>Seed Database</span>
+    </button>
+  </mat-menu>
+
+</mat-toolbar>
