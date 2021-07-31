@@ -13,6 +13,7 @@ export class UserListComponent implements OnInit {
   constructor(private STORE: Store<{users: User[]}>) {}
 
   ngOnInit(): void {
+    this.users$.subscribe(console.log)
   }
 
 }
