@@ -1,0 +1,64 @@
+<div class="dialog-form-container --user">
+  <h2 mat-dialog-title>New Friend Info</h2>
+  <form
+    class="form --user"
+    [formGroup]="UserFormGroup"
+    (ngSubmit)="handleFormSubmit()"
+  >
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input #nameInput matInput type="text" formControlName="name" autofocus />
+      <mat-error *ngIf="UserFormGroup.hasError('required', 'name')">
+        Name is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input
+        #ageInput
+        matInput
+        min="0"
+        step="1"
+        type="number"
+        formControlName="age"
+      />
+      <mat-error *ngIf="UserFormGroup.hasError('required', 'age')">
+        Age is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Weight</mat-label>
+      <input
+        #weightInput
+        matInput
+        min="0"
+        step="10"
+        type="number"
+        formControlName="weight"
+      />
+      <mat-error *ngIf="UserFormGroup.hasError('required', 'weight')">
+        Weight is
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <!-- TODO: Connections -->
+
+    <div class="sub-form-box button-box">
+
+      <button mat-stroked-button
+        type="button"
+        color="link"
+        (click)="discardFormClick()">
+        Discard
+      </button>
+      <button mat-raised-button
+        color="accent"
+        [disabled]="UserFormGroup.invalid">
+        {{submitButtonText}}
+      </button>
+    </div>
+
+  </form>
+</div>

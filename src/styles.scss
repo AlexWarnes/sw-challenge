@@ -6,3 +6,41 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .flex-spacer {
   flex-grow: 1;
 }
+
+// FORM STYLES
+
+.form-container {
+  padding: 15px 10%;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  >mat-form-field {
+    width: 100%;
+  }
+}
+
+.sub-form-box {
+  margin: 0 0 20px 0;
+
+  &.button-box {
+    width: 100%;
+    margin: 12px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.dialog-form {
+  width: 100vw;
+  overflow: auto;
+  .mat-dialog-container {
+    padding-bottom: 0;
+  }
+}

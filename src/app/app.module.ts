@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,12 @@ import { ActionBarComponent } from './components/action-bar/action-bar.component
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { DialogFormUserComponent } from './components/dialog-form-user/dialog-form-user.component';
+import { D3ScatterPlotComponent } from './components/d3-scatter-plot/d3-scatter-plot.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +37,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     ViewHomeComponent,
     ActionBarComponent,
     NavBarComponent,
+    DialogFormUserComponent,
+    D3ScatterPlotComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +55,12 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
+  entryComponents: [DialogFormUserComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

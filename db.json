@@ -3,44 +3,32 @@
     {
       "id": "53661784-d667-4a99-b921-ff6b719a93b0",
       "name": "James Holden",
-      "age": 94,
+      "age": 34,
       "weight": 190
     },
     {
       "id": "901660e1-52d6-41e7-b4b8-2ebf9bf5cfdf",
       "name": "Naomi Nagata",
-      "age": 85,
-      "weight": 154
+      "age": 30,
+      "weight": 124
     },
     {
       "id": "22efa745-6c0b-4d20-b154-4af0d1b3c340",
       "name": "Amos Burton",
-      "age": 12,
+      "age": 42,
       "weight": 181
     },
     {
       "id": "1f539acc-6fdb-4656-a380-6c1150ba9d0c",
       "name": "Alex Kamal",
       "age": 46,
-      "weight": 186
+      "weight": 211
     },
     {
       "id": "6b2c615c-9a09-4d87-8925-374c12de1a33",
       "name": "Bobby Draper",
-      "age": 45,
-      "weight": 189
-    },
-    {
-      "id": "aa30a197-f7cf-4019-ada7-5abe663f7fde",
-      "name": "AlexTest",
-      "age": 81,
-      "weight": 112
-    },
-    {
-      "id": "5f0aa1d6-c6ae-44f4-b40f-514ce8c889f9",
-      "name": "AlexTest",
-      "age": 5,
-      "weight": 145
+      "age": 26,
+      "weight": 168
     }
   ]
 }

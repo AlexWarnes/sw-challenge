@@ -2,16 +2,16 @@
   <!-- USER MENU -->
   <button mat-button class="action-btn" [matMenuTriggerFor]="userMenu" aria-label="Open user menu">
     <mat-icon class="icon">groups</mat-icon>
-    <span class="text">Users</span>
+    <span class="text">Friends</span>
   </button>
   <mat-menu #userMenu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item (click)="handleNewUserClick()">
       <mat-icon>person_add</mat-icon>
-      <span>Create a User</span>
+      <span>Add a Friend</span>
     </button>
     <button mat-menu-item>
       <mat-icon>person_remove</mat-icon>
-      <span>Delete a User</span>
+      <span>Delete a Friend</span>
     </button>
   </mat-menu>
 
@@ -38,11 +38,11 @@
     <span class="text">Admin</span>
   </button>
   <mat-menu #adminMenu="matMenu">
-    <button mat-menu-item (click)="handleSeedUsersClick()">
+    <button mat-menu-item (click)="handleFakeUserClick()">
       <mat-icon>smart_toy</mat-icon>
-      <span>Generate Fake User</span>
+      <span>Generate Fake Friend</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)="handleSeedDatabaseClick()">
       <mat-icon>dynamic_form</mat-icon>
       <span>Seed Database</span>
     </button>

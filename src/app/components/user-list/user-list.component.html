@@ -1,7 +1,5 @@
 <ul>
   <li *ngFor="let user of users$ | async">
-    <pre>
-      {{user | json}}
-    </pre>
+    {{user.name}}
   </li>
 </ul>
