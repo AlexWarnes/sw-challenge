@@ -27,16 +27,6 @@ export class ViewUserComponent implements OnInit {
         return this.USER.connectionsByUserID(user?.id);
       })
     )
-
-  // connectionDetails$ = combineLatest([
-  //   this.userData$,
-  //   this.userConnections$,
-  // ]).pipe(
-  //   filter(([user, connections]) => !!user && !!connections),
-  //   switchMap(([user, connections]) => {
-  //     const userID = user?.id;
-  //   })
-  // );
   constructor(
     private ACT_ROUTE: ActivatedRoute,
     private ROUTER: Router,

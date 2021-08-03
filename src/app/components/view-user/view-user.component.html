@@ -1,2 +1,15 @@
-<p>view-user works!</p>
-<pre>{{userData$ | async | json}}</pre>
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Announcement">
+    <div class="content">
+      <h2>Future Functionality!</h2>
+    </div>
+  </mat-tab>
+  <mat-tab label="Raw Data">
+    <div class="content">
+      <p>User's Data</p>
+      <pre>{{ userData$ | async | json }}</pre>
+      <p>User's Connections</p>
+      <pre>{{ userConnections$ | async | json }}</pre>
+    </div>
+  </mat-tab>
+</mat-tab-group>
