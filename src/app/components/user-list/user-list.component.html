@@ -4,6 +4,16 @@
     <button
       mat-mini-fab
       color="accent"
+      (click)="handleNewConnectionClick()"
+      aria-label="Add connection button"
+      matTooltip="Create a Connection"
+    >
+      <mat-icon>social_distance</mat-icon>
+      <!-- <span>Create a Connection</span> -->
+    </button>
+    <button
+      mat-mini-fab
+      color="accent"
       (click)="handleNewUserClick()"
       aria-label="Add friend button"
       matTooltip="Add a Friend"

@@ -1,4 +1,5 @@
 <div class="dialog-form-container --connection">
+  <h2 mat-dialog-title>New Connection</h2>
   <form
     class="form --connection"
     [formGroup]="ConnectionFormGroup"
@@ -7,7 +8,10 @@
     <mat-form-field>
       <mat-label>Friend</mat-label>
       <mat-select formControlName="person1">
-        <mat-option *ngFor="let user of (options$ | async).p1Options" [value]="user.id">
+        <mat-option
+          *ngFor="let user of (options$ | async).p1Options"
+          [value]="user.id"
+        >
           {{ user.name }}
         </mat-option>
       </mat-select>
@@ -19,8 +23,11 @@
           {{ user.name }}
         </mat-option>
       </mat-select>
+      
     </mat-form-field>
-
+    <mat-error *ngIf="alreadyConnected$ | async">
+      These two are already connected!
+    </mat-error>
     <div class="sub-form-box button-box">
       <button
         mat-stroked-button
@@ -33,7 +40,7 @@
       <button
         mat-raised-button
         color="accent"
-        [disabled]="ConnectionFormGroup.invalid"
+        [disabled]="ConnectionFormGroup.invalid || (alreadyConnected$ | async)"
       >
         {{ submitButtonText }}
       </button>

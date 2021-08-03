@@ -29,88 +29,9 @@
       "name": "Bobby Draper",
       "age": 26,
       "weight": 168
-    },
-    {
-      "id": "0bcf9364-0551-4d62-9e42-7ba26b99a355",
-      "name": "Dan Fred",
-      "age": 35,
-      "weight": 148
-    },
-    {
-      "id": "25e8c51a-8e71-43cf-a0bd-59c19cfe18c2",
-      "name": "Mark Mark",
-      "age": 19,
-      "weight": 140
-    },
-    {
-      "id": "d95d4272-e92f-467e-8199-658b3e76bc5f",
-      "name": "Ike Roger",
-      "age": 41,
-      "weight": 183
-    },
-    {
-      "id": "3895f68c-c950-470e-bc38-698f470a174d",
-      "name": "Ty Frank",
-      "age": 78,
-      "weight": 107
-    },
-    {
-      "id": "b07b208c-a975-4137-903b-616f847e070e",
-      "name": "Monte Thomas",
-      "age": 68,
-      "weight": 179
-    },
-    {
-      "id": "6049a6fb-aee8-48c3-a8be-32f1a419125d",
-      "name": "Jack Roger",
-      "age": 29,
-      "weight": 116
-    },
-    {
-      "id": "88277e09-f75d-44f0-a74f-0556d255e42c",
-      "name": "Carl Mark",
-      "age": 55,
-      "weight": 113
-    },
-    {
-      "id": "fc302d7c-f6c8-4783-ba1b-963412e91123",
-      "name": "Ben Peter",
-      "age": 53,
-      "weight": 187
-    },
-    {
-      "id": "e30264fe-b1a0-4700-bfc6-7b2c3f64f14e",
-      "name": "Mark Nathan",
-      "age": 54,
-      "weight": 113
-    },
-    {
-      "id": "f80c527b-ea8c-4ae8-983c-bbf37311f500",
-      "name": "George Mark",
-      "age": 59,
-      "weight": 126
-    },
-    {
-      "id": "91833810-04bd-44a2-9124-ba43bceb20d4",
-      "name": "Avery Longnamefortruncation",
-      "age": 32,
-      "weight": 120
     }
   ],
   "connections": [
-    {
-      "connectionID": "888026ba-8ccd-4679-8f25-0513ee509e05",
-      "friends": [
-        "53661784-d667-4a99-b921-ff6b719a93b0",
-        "22efa745-6c0b-4d20-b154-4af0d1b3c340"
-      ]
-    },
-    {
-      "connectionID": "20433041-3084-4fc8-89e3-aae5c05a6648",
-      "friends": [
-        "53661784-d667-4a99-b921-ff6b719a93b0",
-        "22efa745-6c0b-4d20-b154-4af0d1b3c340"
-      ]
-    }
+    
   ]
 }

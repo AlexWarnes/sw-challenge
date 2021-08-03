@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/models/User.model';
+import { DialogFormConnectionComponent } from '../dialog-form-connection/dialog-form-connection.component';
 import { DialogFormUserComponent } from '../dialog-form-user/dialog-form-user.component';
 
 @Component({
@@ -35,6 +36,16 @@ export class UserListComponent implements OnInit {
       data: {
         formType: 'CREATE',
       },
+    });
+  }
+
+  handleNewConnectionClick(): void {
+    console.log('handleNewConnectionClick');
+    this.openAddConnectionDialogForm();
+  }
+  openAddConnectionDialogForm() {
+    this.DIALOG.open(DialogFormConnectionComponent, {
+      panelClass: 'dialog-form',
     });
   }
 }

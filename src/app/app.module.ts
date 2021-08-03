@@ -20,7 +20,6 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { ViewHomeComponent } from './components/view-home/view-home.component';
 
 import { MatButtonModule } from '@angular/material/button';
-import { ActionBarComponent } from './components/action-bar/action-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -30,6 +29,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DialogFormUserComponent } from './components/dialog-form-user/dialog-form-user.component';
@@ -44,7 +45,6 @@ import { UserSummaryComponent } from './components/user-summary/user-summary.com
     ViewUsersComponent,
     UserListComponent,
     ViewHomeComponent,
-    ActionBarComponent,
     NavBarComponent,
     DialogFormUserComponent,
     D3ScatterPlotComponent,
@@ -76,7 +76,9 @@ import { UserSummaryComponent } from './components/user-summary/user-summary.com
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatAutocompleteModule,
+    MatChipsModule,
   ],
   entryComponents: [DialogFormUserComponent, DialogFormConnectionComponent],
   providers: [],

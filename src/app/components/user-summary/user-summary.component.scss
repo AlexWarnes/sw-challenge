@@ -1,6 +1,6 @@
 .user-card {
   max-width: 350px;
-  animation: FadeIn .3s ease 0s 1 forwards;
+  animation: SlideIn .3s ease-out 0s 1 forwards;
 
   
   &:hover .user-avatar {
