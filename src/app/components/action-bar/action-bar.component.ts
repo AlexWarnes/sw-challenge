@@ -42,8 +42,6 @@ export class ActionBarComponent implements OnInit {
   }
   openAddUserDialogForm() {
     this.DIALOG.open(DialogFormUserComponent, {
-      minWidth: '50vw',
-      minHeight: '50vh',
       panelClass: 'dialog-form',
       data: {
         formType: 'CREATE',
@@ -52,8 +50,6 @@ export class ActionBarComponent implements OnInit {
   }
   openAddConnectionDialogForm() {
     this.DIALOG.open(DialogFormConnectionComponent, {
-      minWidth: '50vw',
-      minHeight: '50vh',
       panelClass: 'dialog-form',
     });
   }

@@ -27,13 +27,16 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DialogFormUserComponent } from './components/dialog-form-user/dialog-form-user.component';
 import { D3ScatterPlotComponent } from './components/d3-scatter-plot/d3-scatter-plot.component';
 import { DialogFormConnectionComponent } from './components/dialog-form-connection/dialog-form-connection.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
+import { UserSummaryComponent } from './components/user-summary/user-summary.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +50,17 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
     D3ScatterPlotComponent,
     DialogFormConnectionComponent,
     ViewUserComponent,
+    UserSummaryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    StoreModule.forRoot({ users: usersReducer, connections: connectionReducer }),
+    StoreModule.forRoot({
+      users: usersReducer,
+      connections: connectionReducer,
+    }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
@@ -68,6 +75,8 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatCardModule,
+    MatTooltipModule
   ],
   entryComponents: [DialogFormUserComponent, DialogFormConnectionComponent],
   providers: [],

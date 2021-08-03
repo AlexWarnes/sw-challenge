@@ -16,7 +16,7 @@ export class DialogFormUserComponent implements OnInit {
   UserFormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     age: new FormControl('', [Validators.required]),
-    weight: new FormControl(1, [Validators.required, Validators.min(1)]),
+    weight: new FormControl(100, [Validators.required, Validators.min(1)]),
   });
 
   constructor(

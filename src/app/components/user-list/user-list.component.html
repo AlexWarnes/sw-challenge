@@ -1,5 +1,23 @@
-<ul>
-  <li *ngFor="let user of users$ | async">
-    {{user.name}}
-  </li>
-</ul>
+<section class="tile">
+  <div class="header">
+    <h2>All Friends</h2>
+    <button
+      mat-mini-fab
+      color="accent"
+      (click)="handleNewUserClick()"
+      aria-label="Add friend button"
+      matTooltip="Add a Friend"
+    >
+      <mat-icon>person_add</mat-icon>
+    </button>
+  </div>
+  <div class="content">
+    <div
+      *ngFor="let user of users$ | async; trackBy: trackByID"
+      [routerLink]="['/user', user.id]"
+      class="user-summary-wrapper"
+    >
+      <app-user-summary [userData]="user"></app-user-summary>
+    </div>
+  </div>
+</section>

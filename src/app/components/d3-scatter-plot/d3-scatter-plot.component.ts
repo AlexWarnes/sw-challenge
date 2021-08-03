@@ -19,9 +19,9 @@ import { User } from 'src/app/models/User.model';
 export class D3ScatterPlotComponent implements OnInit, AfterViewInit {
   users$: Observable<User[]> = this.STORE.pipe(select('users'));
   svg: any = undefined;
-  margin = { top: 10, right: 30, bottom: 30, left: 60 };
-  width = 400 - this.margin.left - this.margin.right;
-  height = 400 - this.margin.top - this.margin.bottom;
+  margin = { top: 10, right: 30, bottom: 24, left: 30 };
+  width = 320 - this.margin.left - this.margin.right;
+  height = 320 - this.margin.top - this.margin.bottom;
 
   constructor(private STORE: Store<{ users: User[] }>) {}
 
@@ -97,7 +97,8 @@ export class D3ScatterPlotComponent implements OnInit, AfterViewInit {
         return y(d.weight);
       })
       .attr('r', 4)
-      .style('fill', '#69b3a2');
+      .style('fill', '#ff4082')
+      .style('stroke', '#3f51b588')
   }
 
   extractMinMaxValues(users: User[]): {

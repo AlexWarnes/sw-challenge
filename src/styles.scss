@@ -1,8 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --paper-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+body * {
+  box-sizing: border-box;
+}
 .flex-spacer {
   flex-grow: 1;
 }
@@ -20,7 +32,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display: flex;
   flex-direction: column;
 
-  >mat-form-field {
+  > mat-form-field {
     width: 100%;
   }
 }
@@ -38,9 +50,58 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .dialog-form {
-  width: 100vw;
-  overflow: auto;
   .mat-dialog-container {
     padding-bottom: 0;
   }
+}
+
+.tile {
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  margin: 1.25em auto;
+  padding: 0;
+  box-shadow: var(--paper-shadow);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  max-height: 520px;
+
+  .header {
+    padding: 1em 1.25em;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    // Adjust for header height for full scrolling
+    max-height: calc(100% - 68px);
+    overflow: auto;
+    padding: 0 1.25em;
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// Material Overrides
+
+.mat-card-header div.mat-card-header-text {
+  overflow: hidden !important;
 }

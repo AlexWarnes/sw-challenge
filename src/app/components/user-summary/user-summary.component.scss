@@ -1,0 +1,28 @@
+.user-card {
+  max-width: 350px;
+  animation: FadeIn .3s ease 0s 1 forwards;
+
+  
+  &:hover .user-avatar {
+    transform: rotate(-5deg) scale(1.25);
+    background-color: #ff4082;
+  }
+}
+
+.user-avatar {
+  background-image: url('/assets/avatar.svg');
+  background-size: cover;
+  background-color: #3f51b5;
+  transition: all .3s ease-out;
+}
+
+mat-card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 3px;
+}
+
+mat-card-subtitle:last-child {
+  margin: 0;
+}
