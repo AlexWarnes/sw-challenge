@@ -1,27 +1,24 @@
 # SwChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+Hello there!
 
-## Development server
+This prototype application uses `json-server` as a mock API and database. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To make things simpler, **you should run it locally with `npm start`** which will do two important things:
 
-## Code scaffolding
+1. start `json-server` so you'll have data to look at
+2. prevent Angular from recompiling when files change to avoid restarting `json-server` while requests are pending
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## NGRX
+This was my first experience with NGRX. It was fun to play around with! The patterns felt familiar having used Redux in the past, but there were several instances where I felt stuck or confused.
 
-## Build
+## Testing
+I ran out of time. Testing is something I'm less familiar with, and I wanted to put more effort into areas that would show my strengths. I didn't want to ask for an extension just to learn/write tests, but rest assured I would like to learn more.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## D3
+I used plain ol' D3. I _wanted_ to use plain D3 and then a library like `ngx-graphs` or `ngx-charts` but they have peer dependency conflicts with Angular 12. I thought a force-directed graph would be a nice touch but didn't want to downgrade Angular just to make it work.
 
-## Running unit tests
+## Thank you
+I'm really looking foward to your feedback and discussing the code futher.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Alex
