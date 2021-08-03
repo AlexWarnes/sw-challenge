@@ -30,5 +30,21 @@
       "age": 26,
       "weight": 168
     }
+  ],
+  "connections": [
+    {
+      "connectionID": "888026ba-8ccd-4679-8f25-0513ee509e05",
+      "friends": [
+        "53661784-d667-4a99-b921-ff6b719a93b0",
+        "22efa745-6c0b-4d20-b154-4af0d1b3c340"
+      ]
+    },
+    {
+      "connectionID": "20433041-3084-4fc8-89e3-aae5c05a6648",
+      "friends": [
+        "53661784-d667-4a99-b921-ff6b719a93b0",
+        "22efa745-6c0b-4d20-b154-4af0d1b3c340"
+      ]
+    }
   ]
 }

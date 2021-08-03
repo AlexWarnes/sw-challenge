@@ -12,7 +12,9 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 
 import { UserEffects } from './state/user.effects';
+import { ConnectionEffects } from './state/connection.effects';
 import { usersReducer } from './state/users.reducer';
+import { connectionReducer } from './state/connection.reducer';
 import { ViewUsersComponent } from './components/view-users/view-users.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { ViewHomeComponent } from './components/view-home/view-home.component';
@@ -25,9 +27,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DialogFormUserComponent } from './components/dialog-form-user/dialog-form-user.component';
 import { D3ScatterPlotComponent } from './components/d3-scatter-plot/d3-scatter-plot.component';
+import { DialogFormConnectionComponent } from './components/dialog-form-connection/dialog-form-connection.component';
+import { ViewUserComponent } from './components/view-user/view-user.component';
 
 @NgModule({
   declarations: [
@@ -39,18 +45,20 @@ import { D3ScatterPlotComponent } from './components/d3-scatter-plot/d3-scatter-
     NavBarComponent,
     DialogFormUserComponent,
     D3ScatterPlotComponent,
+    DialogFormConnectionComponent,
+    ViewUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    StoreModule.forRoot({ users: usersReducer }),
+    StoreModule.forRoot({ users: usersReducer, connections: connectionReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
     }),
-    EffectsModule.forRoot([UserEffects]),
+    EffectsModule.forRoot([UserEffects, ConnectionEffects]),
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
@@ -59,8 +67,9 @@ import { D3ScatterPlotComponent } from './components/d3-scatter-plot/d3-scatter-
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSelectModule,
   ],
-  entryComponents: [DialogFormUserComponent],
+  entryComponents: [DialogFormUserComponent, DialogFormConnectionComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

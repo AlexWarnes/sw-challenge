@@ -44,7 +44,7 @@ export class DialogFormUserComponent implements OnInit {
     if (this.formData.formType === 'CREATE') {
       this.createUser();
     } else if (this.formData.formType === 'UPDATE') {
-      this.updateIncentive();
+      this.updateUser();
     }
   }
 
@@ -58,7 +58,7 @@ export class DialogFormUserComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  updateIncentive() {
+  updateUser() {
     //const updatedUser = {...this.formData.userData, ...this.UserFormGroup.value};
     // TODO: PUT request to update user
   }

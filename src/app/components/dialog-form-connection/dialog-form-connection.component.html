@@ -1,0 +1,43 @@
+<div class="dialog-form-container --connection">
+  <form
+    class="form --connection"
+    [formGroup]="ConnectionFormGroup"
+    (ngSubmit)="handleFormSubmit()"
+  >
+    <mat-form-field>
+      <mat-label>Friend</mat-label>
+      <mat-select formControlName="person1">
+        <mat-option *ngFor="let user of (options$ | async).p1Options" [value]="user.id">
+          {{ user.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Friend</mat-label>
+      <mat-select formControlName="person2">
+        <mat-option *ngFor="let user of users$ | async" [value]="user.id">
+          {{ user.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="sub-form-box button-box">
+      <button
+        mat-stroked-button
+        type="button"
+        color="link"
+        (click)="discardFormClick()"
+      >
+        Discard
+      </button>
+      <button
+        mat-raised-button
+        color="accent"
+        [disabled]="ConnectionFormGroup.invalid"
+      >
+        {{ submitButtonText }}
+      </button>
+    </div>
+  </form>
+</div>
+<!-- matNativeControl -->

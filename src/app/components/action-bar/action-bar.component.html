@@ -21,7 +21,7 @@
     <span class="text">Connections</span>
   </button>
   <mat-menu #connectionMenu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item (click)="handleNewConnectionClick()">
       <mat-icon>social_distance</mat-icon>
       <span>Create a Connection</span>
     </button>
