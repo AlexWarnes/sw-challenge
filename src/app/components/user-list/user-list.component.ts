@@ -18,9 +18,7 @@ export class UserListComponent implements OnInit {
     private DIALOG: MatDialog
   ) {}
 
-  ngOnInit(): void {
-    this.users$.subscribe(console.log);
-  }
+  ngOnInit(): void {}
 
   handleNewUserClick() {
     this.openAddUserDialogForm();
@@ -40,7 +38,6 @@ export class UserListComponent implements OnInit {
   }
 
   handleNewConnectionClick(): void {
-    console.log('handleNewConnectionClick');
     this.openAddConnectionDialogForm();
   }
   openAddConnectionDialogForm() {

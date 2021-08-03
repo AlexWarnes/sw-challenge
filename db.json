@@ -31,5 +31,62 @@
       "weight": 168
     }
   ],
-  "connections": []
+  "connections": [
+    {
+      "connectionID": "e298bb77-ccb0-455a-805e-d1074b263dcc",
+      "friends": [
+        "53661784-d667-4a99-b921-ff6b719a93b0",
+        "901660e1-52d6-41e7-b4b8-2ebf9bf5cfdf"
+      ],
+      "id": 1
+    },
+    {
+      "connectionID": "1695d832-02bc-4aea-8909-d30d10bc1c94",
+      "friends": [
+        "53661784-d667-4a99-b921-ff6b719a93b0",
+        "22efa745-6c0b-4d20-b154-4af0d1b3c340"
+      ],
+      "id": 2
+    },
+    {
+      "connectionID": "923ac5f4-d76c-4bd4-b75d-0a86c4bf8a47",
+      "friends": [
+        "53661784-d667-4a99-b921-ff6b719a93b0",
+        "1f539acc-6fdb-4656-a380-6c1150ba9d0c"
+      ],
+      "id": 3
+    },
+    {
+      "connectionID": "4c1c723b-d5c0-46cb-b9de-ff48618ef02b",
+      "friends": [
+        "901660e1-52d6-41e7-b4b8-2ebf9bf5cfdf",
+        "6b2c615c-9a09-4d87-8925-374c12de1a33"
+      ],
+      "id": 4
+    },
+    {
+      "connectionID": "2eb95f2f-f700-48d9-9d85-76206a57707c",
+      "friends": [
+        "901660e1-52d6-41e7-b4b8-2ebf9bf5cfdf",
+        "22efa745-6c0b-4d20-b154-4af0d1b3c340"
+      ],
+      "id": 5
+    },
+    {
+      "connectionID": "e274a08e-863d-4a86-a2da-3a570d597aec",
+      "friends": [
+        "22efa745-6c0b-4d20-b154-4af0d1b3c340",
+        "1f539acc-6fdb-4656-a380-6c1150ba9d0c"
+      ],
+      "id": 6
+    },
+    {
+      "connectionID": "a4c18afe-a714-4f26-ace7-710b49b4ab44",
+      "friends": [
+        "6b2c615c-9a09-4d87-8925-374c12de1a33",
+        "1f539acc-6fdb-4656-a380-6c1150ba9d0c"
+      ],
+      "id": 7
+    }
+  ]
 }

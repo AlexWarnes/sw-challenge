@@ -8,7 +8,6 @@ export const initialState: ReadonlyArray<User> = [];
 export const usersReducer = createReducer(
   initialState,
   on(loadUsersSuccess, (state, { users }) => {
-    console.log("users", users);
     return [...users]
   }),
   on(addUser, (state, { user }) => [user, ...state]),

@@ -73,7 +73,7 @@ export class DialogFormUserComponent implements OnInit {
       this.submitButtonText = 'Add';
     } else if (this.formData.formType === 'UPDATE') {
       this.submitButtonText = 'Update';
-      const { name, age, weight } = this.formData.incentiveData;
+      const { name, age, weight } = this.formData;
       this.UserFormGroup.setValue({ name, age, weight });
     }
   }
@@ -119,7 +119,6 @@ export class DialogFormUserComponent implements OnInit {
   }
 
   add(event: MatChipInputEvent): void {
-    console.log('ADD', event.value);
     const value = event.value;
 
     // Add our friend

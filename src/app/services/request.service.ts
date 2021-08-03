@@ -23,12 +23,9 @@ export class RequestService {
   }
   createNewConnections(connections: Connection[]): Observable<any> {
     return from(connections).pipe(
-      concatMap(connection => {
+      concatMap((connection) => {
         return this.HTTP.post(`${this.BASE_API_URL}/connections`, connection);
-      }),
-      tap((val) => console.log("concat emit:", val))
-    )
+      })
+    );
   }
-
-
 }

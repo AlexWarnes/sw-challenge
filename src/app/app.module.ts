@@ -15,7 +15,6 @@ import { UserEffects } from './state/user.effects';
 import { ConnectionEffects } from './state/connection.effects';
 import { usersReducer } from './state/users.reducer';
 import { connectionReducer } from './state/connection.reducer';
-import { ViewUsersComponent } from './components/view-users/view-users.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { ViewHomeComponent } from './components/view-home/view-home.component';
 
@@ -45,7 +44,6 @@ import { DataTilesComponent } from './components/data-tiles/data-tiles.component
 @NgModule({
   declarations: [
     AppComponent,
-    ViewUsersComponent,
     UserListComponent,
     ViewHomeComponent,
     NavBarComponent,

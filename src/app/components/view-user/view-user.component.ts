@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { combineLatest, forkJoin, from, Observable, of } from 'rxjs';
-import { switchMap, filter, mergeMap, map, concatMap } from 'rxjs/operators';
-import { Connection } from 'src/app/models/Connection.model';
+import { ActivatedRoute } from '@angular/router';
+import {  Observable } from 'rxjs';
+import { switchMap, filter } from 'rxjs/operators';
 import { User } from 'src/app/models/User.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -20,20 +19,16 @@ export class ViewUserComponent implements OnInit {
     })
   );
 
-  userConnections$: Observable<any> =
-    this.userData$.pipe(
-      filter(user => !!user),
-      switchMap((user) => {
-        return this.USER.connectionsByUserID(user?.id);
-      })
-    )
+  userConnections$: Observable<any> = this.userData$.pipe(
+    filter((user) => !!user),
+    switchMap((user) => {
+      return this.USER.connectionsByUserID(user?.id);
+    })
+  );
   constructor(
     private ACT_ROUTE: ActivatedRoute,
-    private ROUTER: Router,
     private USER: UserService
   ) {}
 
-  ngOnInit(): void {
-    this.userConnections$.subscribe(data => console.log("boom", data))
-  }
+  ngOnInit(): void {}
 }

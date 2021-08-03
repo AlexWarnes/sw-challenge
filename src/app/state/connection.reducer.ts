@@ -15,7 +15,6 @@ export const initialState: ReadonlyArray<Connection> = [];
 export const connectionReducer = createReducer(
   initialState,
   on(loadConnectionsSuccess, (state, { connections }) => {
-    console.log('connections', connections);
     return [...connections];
   }),
 
