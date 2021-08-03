@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { map, mergeMap, catchError } from 'rxjs/operators';
+import { NotificationService } from '../services/notification.service';
 import { RequestService } from '../services/request.service';
 
 @Injectable()
@@ -15,7 +16,12 @@ export class ConnectionEffects {
             type: 'Connections Loaded Success',
             connections,
           })),
-          catchError(() => of({ type: 'Connections Loaded Error' }))
+          catchError(() => {
+            this.SNACK.showSnackbar(
+              'Error fetching data. Confirm you used `npm start` and NOT `ng serve` to run this application. `npm start` enables json-server to run in the background as a fake API.'
+            );
+            return of({ type: 'Connections Loaded Error' });
+          })
         )
       )
     )
@@ -35,5 +41,9 @@ export class ConnectionEffects {
     )
   );
 
-  constructor(private actions$: Actions, private REQUEST: RequestService) {}
+  constructor(
+    private actions$: Actions,
+    private REQUEST: RequestService,
+    private SNACK: NotificationService
+  ) {}
 }

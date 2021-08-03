@@ -31,6 +31,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DialogFormUserComponent } from './components/dialog-form-user/dialog-form-user.component';
@@ -79,6 +80,7 @@ import { UserSummaryComponent } from './components/user-summary/user-summary.com
     MatTooltipModule,
     MatAutocompleteModule,
     MatChipsModule,
+    MatSnackBarModule
   ],
   entryComponents: [DialogFormUserComponent, DialogFormConnectionComponent],
   providers: [],
