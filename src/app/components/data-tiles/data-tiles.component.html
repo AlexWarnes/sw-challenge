@@ -1,0 +1,18 @@
+<div class="data-row">
+  <div class="tile">
+    <p class="stat">{{ totalFriendsCount$ | async }}</p>
+    <h3 class="label">Friends</h3>
+  </div>
+  <div class="tile">
+    <p class="stat">{{ totalConnectionsCount$ | async }}</p>
+    <h3 class="label">Connections</h3>
+  </div>
+  <div class="tile">
+    <p class="stat">{{ (average$ | async)?.age }}</p>
+    <h3 class="label">Average Age</h3>
+  </div>
+  <div class="tile">
+    <p class="stat">{{ (average$ | async)?.weight }}</p>
+    <h3 class="label">Average Weight</h3>
+  </div>
+</div>

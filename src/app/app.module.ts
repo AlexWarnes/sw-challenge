@@ -39,6 +39,7 @@ import { D3ScatterPlotComponent } from './components/d3-scatter-plot/d3-scatter-
 import { DialogFormConnectionComponent } from './components/dialog-form-connection/dialog-form-connection.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UserSummaryComponent } from './components/user-summary/user-summary.component';
+import { DataTilesComponent } from './components/data-tiles/data-tiles.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { UserSummaryComponent } from './components/user-summary/user-summary.com
     DialogFormConnectionComponent,
     ViewUserComponent,
     UserSummaryComponent,
+    DataTilesComponent,
   ],
   imports: [
     BrowserModule,
